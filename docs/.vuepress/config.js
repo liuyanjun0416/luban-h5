@@ -1,15 +1,17 @@
 module.exports = {
-  title: '鲁班H5',
+  title: 'LubanH5',
   base: '/luban-h5/',
   locales: {
     '/': {
+      title: 'LubanH5',
       lang: 'en-US',
       // description: 'OpenSource Mobile Page Builder&Generator with Drag&Drop\r\n前后端均开源的H5制作平台，类似易企秀、百度H5、Maka、人人秀',
       description: 'OpenSource Mobile Page Builder&Generator',
     },
     '/zh/': {
+      title: '鲁班H5',
       lang: 'zh-CN',
-      // description: '前后端均开源的H5制作平台，类似易企秀、百度H5、Maka、人人秀',
+      description: '前后端均开源的H5制作平台，类似易企秀、百度H5、Maka、人人秀',
     },
   },
   serviceWorker: {},
@@ -35,7 +37,9 @@ module.exports = {
           // { text: 'Config', link: '/config/' },
           // { text: 'API', link: '/api/' },
           { text: 'Website', link: 'https://h5.luban-h5.com' },
+          { text: 'Ecosystem', link: '/zh/ecosystem/' },
           { text: 'Changelog', link: 'https://github.com/ly525/luban-h5/releases' },
+          { text: 'Api Docs', link: 'https://h5.luban-h5.com/documentation/' },
         ],
         sidebar: {
           '/': [
@@ -51,18 +55,40 @@ module.exports = {
               ],
             },
             {
+              collapsable: false,
+              title: '🤝Ecosystem',
+              children: [
+                '/zh/ecosystem/',
+                '/zh/ecosystem/backend-intergration'
+              ],
+            },
+            {
+              collapsable: false,
+              title: '🔌Plugins Development',
+              children: [
+                '/zh/plugin-development/',
+                '/zh/plugin-development/how-it-works/simple-prop',
+                '/zh/plugin-development/how-it-works/custom-editor-single-prop',
+                '/zh/plugin-development/how-it-works/custom-editor-multiple-props',
+                '/zh/plugin-development/quick-start',
+                '/zh/plugin-development/cli-params',
+                '/zh/plugin-development/plugin-default-inject-props',
+                '/zh/plugin-development/reference',
+              ],
+            },
+            {
+              collapsable: false,
+              title: 'Migrating',
+              children: [
+                '/en/migration-guide/',
+              ],
+            },
+            {
               collapsable: true,
               title: '💡Implementation',
               children: [
                 '/en/implementation/code-structure',
                 '/en/implementation/form-submit',
-              ],
-            },
-            {
-              collapsable: true,
-              title: '🔌 Local plugins',
-              children: [
-                '/en/plugin-development/quick-start',
               ],
             },
           ],
@@ -76,9 +102,10 @@ module.exports = {
           // { text: '指南', link: '/zh/guide/' },
           // { text: '配置', link: '/zh/config/' },
           // { text: 'API', link: '/zh/api/' },
-          // { text: '插件', link: '/zh/plugin/' },
           { text: '首页', link: 'https://h5.luban-h5.com' },
+          { text: '生态', link: '/zh/ecosystem/' },
           { text: '发布日志', link: 'https://github.com/ly525/luban-h5/releases' },
+          { text: '后端API文档', link: 'https://h5.luban-h5.com/documentation/' },
         ],
         sidebar: {
           '/': [
@@ -95,17 +122,40 @@ module.exports = {
             },
             {
               collapsable: false,
+              title: '🤝社区生态-周边建设',
+              children: [
+                '/zh/ecosystem/',
+                '/zh/ecosystem/backend-intergration'
+
+              ],
+            },
+            {
+              collapsable: false,
+              title: '🔌插件/自定义组件开发(Alpha)',
+              children: [
+                '/zh/plugin-development/',
+                '/zh/plugin-development/how-it-works/simple-prop',
+                '/zh/plugin-development/how-it-works/custom-editor-single-prop',
+                '/zh/plugin-development/how-it-works/custom-editor-multiple-props',
+                '/zh/plugin-development/quick-start',
+                '/zh/plugin-development/cli-params',
+                '/zh/plugin-development/plugin-default-inject-props',
+                '/zh/plugin-development/reference',
+              ],
+            },
+            {
+              collapsable: false,
+              title: '迁移',
+              children: [
+                '/zh/migration-guide/',
+              ],
+            },
+            {
+              collapsable: false,
               title: '💡实现原理',
               children: [
                 '/zh/implementation/code-structure',
                 '/zh/implementation/form-submit',
-              ],
-            },
-            {
-              collapsable: true,
-              title: '🔌 Local plugins',
-              children: [
-                '/zh/plugin-development/quick-start',
               ],
             },
           ],

@@ -2,6 +2,51 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.3](https://github.com/ly525/luban-h5/compare/v1.8.2...v1.8.3) (2020-02-19)
+
+
+### Bug Fixes
+
+* [#136](https://github.com/ly525/luban-h5/issues/136) ([532ed11](https://github.com/ly525/luban-h5/commit/532ed11))
+
+### [1.8.2](https://github.com/ly525/luban-h5/compare/v1.8.1...v1.8.2) (2020-01-24)
+
+
+### Bug Fixes
+
+* [#119](https://github.com/ly525/luban-h5/issues/119) run animation when slide changes; (zh) 滚动页面时候执行动画 ([796a5e1](https://github.com/ly525/luban-h5/commit/796a5e1))
+* [#124](https://github.com/ly525/luban-h5/issues/124) ([c8bc04b](https://github.com/ly525/luban-h5/commit/c8bc04b))
+* [#130](https://github.com/ly525/luban-h5/issues/130) ([8c6056f](https://github.com/ly525/luban-h5/commit/8c6056f))
+* [#131](https://github.com/ly525/luban-h5/issues/131) ([51f21d7](https://github.com/ly525/luban-h5/commit/51f21d7))
+* [#132](https://github.com/ly525/luban-h5/issues/132)  [#134](https://github.com/ly525/luban-h5/issues/134) ([be2d3eb](https://github.com/ly525/luban-h5/commit/be2d3eb))
+* [#133](https://github.com/ly525/luban-h5/issues/133) ([cda6d96](https://github.com/ly525/luban-h5/commit/cda6d96))
+* do not generate page uuid and set uuid from api ([edea576](https://github.com/ly525/luban-h5/commit/edea576))
+
+
+### Features
+
+* upload video ([2e6cd48](https://github.com/ly525/luban-h5/commit/2e6cd48))
+
+### [1.8.1](https://github.com/ly525/luban-h5/compare/v1.8.0...v1.8.1) (2020-01-12)
+
+
+### Bug Fixes
+
+* [#59](https://github.com/ly525/luban-h5/issues/59) ([81093c0](https://github.com/ly525/luban-h5/commit/81093c0))
+
+## [1.8.0](https://github.com/ly525/luban-h5/compare/v1.7.4...v1.8.0) (2020-01-11)
+
+
+### Bug Fixes
+
+* build engine if front-end build ([d5142a3](https://github.com/ly525/luban-h5/commit/d5142a3))
+* could not replace localhost:1337 if coverUrl is null ([942ad39](https://github.com/ly525/luban-h5/commit/942ad39))
+
+
+### Features
+
+* serve editor(front-end) with strapi(koa-static) ([1f9f1ab](https://github.com/ly525/luban-h5/commit/1f9f1ab))
+
 ### [1.7.4](https://github.com/ly525/luban-h5/compare/v1.7.3...v1.7.4) (2020-01-04)
 
 

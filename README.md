@@ -18,16 +18,53 @@ Mobile Page Builder&Generator with Drag&Drop
 [![GitHub stars](https://img.shields.io/github/stars/ly525/luban-h5.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/ly525/luban-h5/stargazers/)
 [![码云](https://img.shields.io/badge/Gitee--yellow.svg?style=social&logo=data:image/svg+xml;base64,PHN2ZyB0PSIxNTc0ODM3MTM4ODM3IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE3NzAiICAgICB3aWR0aD0iMTYiIGhlaWdodD0iMTYiPiAgICA8cGF0aCBkPSJNODkxIDQyOC44SDQ2NS44Yy0yMC40IDAtMzcgMTYuNS0zNyAzN3Y5Mi40YzAgMjAuNCAxNi41IDM3IDM3IDM3aDI1OC45YzIwLjQgMCAzNyAxNi42IDM3IDM3djE4LjRjMCA2MS4zLTQ5LjcgMTEwLjktMTEwLjkgMTEwLjlIMjk5LjRjLTIwLjQgMC0zNy0xNi42LTM3LTM3VjM3My4yYzAtNjEuMyA0OS43LTExMC45IDExMC45LTExMC45aDUxNy42YzIwLjQgMCAzNy0xNi41IDM3LTM3bDAuMS05Mi4zYzAtMjAuNC0xNi41LTM3LTM3LTM3SDM3My4zQzIyMC4yIDk2IDk2IDIyMC4yIDk2IDM3My4zVjg5MWMwIDIwLjQgMTYuNiAzNyAzNyAzN2g1NDUuNEM4MTYuMiA5MjggOTI4IDgxNi4zIDkyOCA2NzguNFY0NjUuOGMwLTIwLjQtMTYuNi0zNy0zNy0zN3oiICAgICAgICAgIGZpbGw9IiNkODFlMDYiIHAtaWQ9IjE3NzEiPjwvcGF0aD48L3N2Zz4=)](https://gitee.com/ly525/luban-h5.git)
 
-### 快速体验
+## 快速体验
+> 以下三种方式，任选其中一种即可
+
+#### 一、一键脚本
+```bash
+git clone https://github.com/ly525/luban-h5 && cd luban-h5
+# 安装依赖，构建前后端（安装依赖会耗时略长，请耐心等待）
+./luban-h5.sh init
+
+# 启动项目访问 http://localhost:1337 即可
+./luban-h5.sh start
+
+# ./luban-h5.sh stop
+```
+
+- 更多细节，请参照 [鲁班H5-在线文档](https://ly525.github.io/luban-h5/zh/) 的 [`快速开始`](https://ly525.github.io/luban-h5/zh/getting-started/quick-start.html) 章节，进行配置即可
+
+- 如果遇到接口 403 问题，请参照 [`快速开始`](https://ly525.github.io/luban-h5/zh/getting-started/quick-start.html) 章节，搜索关键字：403 即可
+
+
+#### 二、本地安装了 Node、Yarn
+```bash
+git clone https://github.com/ly525/luban-h5
+cd luban-h5 # 项目根目录
+
+# 后端
+cd back-end/h5-api && yarn && yarn dev
+
+# 前端
+# 新开一个终端，在项目根目录执行如下命令
+cd front-end/h5 && yarn && yarn build:engine && yarn dev
+```
+- 按照提示，在浏览器中访问终端中提示的 URL 即可
+- 更多细节，请参照 [鲁班H5-在线文档](https://ly525.github.io/luban-h5/zh/) 的 [`快速开始`](https://ly525.github.io/luban-h5/zh/getting-started/quick-start.html) 章节，进行配置即可
+
+
+#### 二、熟悉 Docker
 > 使用官方提供的 [***一键安装脚本***](https://raw.githubusercontent.com/ly525/luban-h5/dev/deploy/ubuntu-install.sh)，简化安装步骤，在本地通过使用 `Docker+Ubuntu 镜像`，即可`快速安装+体验` 鲁班H5
 
-> [快速体验-完整文档](https://github.com/ly525/luban-h5/wiki/Quick-Start(%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E7%AF%87)%EF%BC%9ADocker-Ubuntu-Image-for-Quick-Local-Dev)
-
-> 简而言之：
+> [快速体验-完整文档](https://github.com/ly525/luban-h5/wiki/Quick-Start(%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E7%AF%87)%EF%BC%9ADocker-Ubuntu-Image-for-Quick-Local-Dev)，简而言之：
 
 ```shell
 docker pull ubuntu
 docker run -it -p 1234:80 -p 1235:1337  -v `pwd`:/app ubuntu
+# 使用清华大学 Ubuntu 软件镜像
+sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
+apt update && apt install -y wget git
 wget -qO- https://raw.githubusercontent.com/ly525/luban-h5/dev/deploy/ubuntu-install.sh | bash
 
 # 安装完成之后
@@ -137,7 +174,7 @@ wget -qO- https://raw.githubusercontent.com/ly525/luban-h5/dev/deploy/ubuntu-ins
 #### 技术栈（当前）
 1. 前端：[Vue.js](https://vuejs.org/v2/guide/)
 2. 后端：[Strapi](https://strapi.io/)
-3. 存储：[Sqlite](https://mongodb.com)
+3. 存储：[Sqlite](https://www.sqlite.org/)
 
 #### 如何贡献
-所有合理的改动、优化、修正，新的组件，或者文档的修正、更新 相关的提交都会被接收
+所有合理的改动、优化、修正，新的组件，或者文档的修正、更新 相关的提交都会被接受
